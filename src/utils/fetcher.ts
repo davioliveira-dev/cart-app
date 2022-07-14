@@ -3,7 +3,8 @@ export async function fetcher<T>(
   options: RequestInit = {}
 ): Promise<T> {
   const dev = process.env.NODE_ENV !== "production";
-  const server = dev ? "http://localhost:3000" : window.location.href;
+  const serverUrl = new URL(window.location.href);
+  const server = dev ? "http://localhost:3000" : "https://" + serverUrl.host;
 
   const response = await fetch(`${server}${url}`, options);
   if (!response.ok) {
