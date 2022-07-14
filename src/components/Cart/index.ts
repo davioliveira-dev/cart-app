@@ -1,5 +1,5 @@
-import { Button } from "../../components/Common/Button";
 import { styled } from "../../themes";
+import { Button } from "../Common/Button";
 
 export const Main = styled("main", {
   alignItems: "center",

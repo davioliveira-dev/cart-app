@@ -1,10 +1,5 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { CartItem } from "../../components/CartItem";
-import { Button } from "../../components/Common/Button";
-import { Card } from "../../components/Common/Card";
-import { useCart } from "../../hooks/useCart";
-import { formatPrice } from "../../utils/formatPrice";
 import {
   CheckoutButton,
   FreightBonus,
@@ -12,7 +7,12 @@ import {
   NoData,
   ReturnButton,
   Title,
-} from "./styles";
+} from "../../components/Cart";
+import { CartItem } from "../../components/CartItem";
+import { Button } from "../../components/Common/Button";
+import { Card } from "../../components/Common/Card";
+import { useCart } from "../../hooks/useCart";
+import { formatPrice } from "../../utils/formatPrice";
 
 const Cart = () => {
   const router = useRouter();
