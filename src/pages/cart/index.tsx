@@ -1,3 +1,4 @@
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import {
@@ -16,6 +17,7 @@ import { formatPrice } from "../../utils/formatPrice";
 
 const Cart = () => {
   const router = useRouter();
+  const { theme } = useTheme();
   const { getCartItems, getTotalPrice } = useCart();
   const products = getCartItems();
   const totalPrice = getTotalPrice();
@@ -34,7 +36,11 @@ const Cart = () => {
                 <p>Total</p> {formatPrice(totalPrice)}
               </div>
               {totalPrice / 100 > 10 && (
-                <FreightBonus>
+                <FreightBonus
+                  css={{
+                    color: theme === "dark" ? "$white" : "$green",
+                  }}
+                >
                   <span>Parabéns, sua compra tem frete grátis !</span>
                 </FreightBonus>
               )}
