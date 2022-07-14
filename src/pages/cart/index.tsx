@@ -1,4 +1,5 @@
 import { useTheme } from "next-themes";
+import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import {
@@ -24,6 +25,9 @@ const Cart = () => {
 
   return (
     <Main>
+      <Head>
+        <title>Carrin</title>
+      </Head>
       {products.length > 0 && (
         <ul>
           <Card>
