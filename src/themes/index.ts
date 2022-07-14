@@ -8,7 +8,7 @@ const { theme, styled, globalCss, createTheme, getCssText } = createStitches({
       white: "#ffffff",
       green: "#217a00",
       primary: "#3b74f2",
-      secondary: "#c7ffa6",
+      secondary: "#8DE88B",
       borderColor: "#c4c4c4",
     },
     shadows: {
