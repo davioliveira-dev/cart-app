@@ -73,7 +73,12 @@ export const useCart = () => {
       ids.add(p.id);
       return true;
     });
-    return products;
+
+    const removeProductsWithZeroQuantity = products.filter(
+      (p) => p.quantity > 0
+    );
+
+    return removeProductsWithZeroQuantity;
   };
 
   const getTotalProducts = () => getCartItems().length;
