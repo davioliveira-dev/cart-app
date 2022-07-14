@@ -28,8 +28,9 @@ export const Button = styled("button", {
     },
     secondary: {
       true: {
-        background: "$secondary",
-        color: "$black",
+        background: "none",
+        border: "3px solid $secondary",
+        color: "$secondary",
       },
     },
   },
